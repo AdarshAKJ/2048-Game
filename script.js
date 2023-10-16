@@ -97,7 +97,7 @@ document.addEventListener('keyup', (e) => {
     }
     if (k && x == (rows * columns))
     {
-        K++;
+        K = 0;
         document.getElementById("score1").innerText = score;
         openPopup();
     }
