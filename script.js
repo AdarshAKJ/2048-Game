@@ -3,7 +3,7 @@ var curr;
 var score = 0;
 var rows = 4;
 var columns = 4;
-
+var K = 1;
 window.onload = function() {
     setGame();
 }
@@ -64,23 +64,23 @@ document.addEventListener('keyup', (e) => {
         }
     }
     let k = 0;
-    if (e.code == "ArrowLeft") {
+    if (e.code == "ArrowLeft" && K) {
         k++;
         slideLeft();
         setTwo();
     }
-    else if (e.code == "ArrowRight") {
+    else if (e.code == "ArrowRight" && K) {
         k++;
         slideRight();
         setTwo();
     }
-    else if (e.code == "ArrowUp") {
+    else if (e.code == "ArrowUp" && K) {
         k++;
         slideUp();
         setTwo();
 
     }
-    else if (e.code == "ArrowDown") {
+    else if (e.code == "ArrowDown" && K) {
         k++;
         slideDown();
         setTwo();
@@ -97,6 +97,7 @@ document.addEventListener('keyup', (e) => {
     }
     if (k && x == (rows * columns))
     {
+        K++;
         document.getElementById("score1").innerText = score;
         openPopup();
     }
