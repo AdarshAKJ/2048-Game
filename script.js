@@ -4,6 +4,7 @@ var score = 0;
 var rows = 4;
 var columns = 4;
 var K = 1;
+
 window.onload = function() {
     setGame();
 }
